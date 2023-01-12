@@ -58,7 +58,7 @@
     <main>
         <section class="hero overlay">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
+            <button class="button" type="button" data-modal-open>Замовити послугу</button>
         </section>
         
         <section class="section features">
@@ -410,14 +410,73 @@
                     </li>
                 </ul>
             </div>
+            
+            <form class="subscription-form" name="subscription-form" autocomplete="on" novalidate>
+                <label class="subscription-label" for="user-email-subscription">Підпишіться на розсилку</label>
+                <div class="subscription-container">
+                    <input class="subscription-input" id="user-email-subscription" type="email" name="user-email-subscription"
+                        placeholder="E-mail">
+                    <button class="subscription-button button" title="submit">
+                        Підписатися
+                        <svg height="24" width="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button class="close-black" type="button" data-modal-close>
-                <img src="./images/close-black-18dp.svg" alt="чорний хрестик закриття діалогового вікна">
-            </button>
+        <div class="modal-container">
+            <div class="modal">
+                <button class="close-button" type="button" data-modal-close>
+                    <svg height="18" width="18">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+                <form name="contact-form" autocomplete="on" novalidate>
+                    <label class="form-field-label" for="user-name">Ім'я</label>
+                    <div class="form-field">
+                        <input class="form-field-input" id="user-name" type="text" name="user-name">
+                        <svg class="form-field-icon" height="18" width="18">
+                            <use href="./images/icons.svg#icon-name"></use>
+                        </svg>
+                    </div>
+                
+                    <label class="form-field-label" for="user-phone">Телефон</label>
+                    <div class="form-field">
+                        <input class="form-field-input" id="user-phone" type="tel" name="user-phone">
+                        <svg class="form-field-icon" height="18" width="18">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
+                
+                    <label class="form-field-label" for="user-email">Пошта</label>
+                    <div class="form-field">
+                        <input class="form-field-input" id="user-email" type="email" name="user-email">
+                        <svg class="form-field-icon" height="18" width="18">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
+                
+                    <label class="form-field-label" for="user-comment">Коментар</label>
+                    <textarea class="form-field-textarea" id="user-comment" name="user-comment" placeholder="Введіть текст"></textarea>
+                
+                    <div class="form-field-checkbox">
+                        
+                        <input class="form-field-input-checkbox" id="terms-checkbox" type="checkbox" name="terms-checkbox">
+                        <svg class="checkbox-icon" height="15" width="16">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                        <label class="form-field-label-checkbox" for="terms-checkbox">Погоджуюся з розсилкою та приймаю <a
+                                class="terms-link" href="#">Умови договору</a></label>
+                    </div>
+                
+                    <button class="form-field-submit button" type="submit">Відправити</button>
+                </form>
+            </div>
         </div>
     </div>
 
